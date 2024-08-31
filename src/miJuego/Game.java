@@ -4,12 +4,12 @@ import java.util.Random;
 
 public class Game {
 
-    private static final int TAMAÑO = 6; // Tamaño del tablero
-    private static final String VACIO = "\u001B[47m     \u001B[0m"; // Casilla vacía con fondo blanco y espacios
-    private static final String JUGADOR = "\u001B[42m  J  \u001B[0m"; // Casilla del jugador con fondo verde y espacios
-    private static final String ENEMIGO = "\u001B[41m  E  \u001B[0m"; // Representación interna del enemigo (no visible para el jugador)
-    private static final String SALIDA = "\u001B[43m  S  \u001B[0m"; // Casilla de salida con fondo amarillo y espacios
-    private static final String VIDA_EXTRA = "\u001B[44m  V  \u001B[0m"; // Casilla de vida extra con fondo azul y espacios
+    private static final int TAMAÑO = 6;
+    private static final String VACIO = "\u001B[47m     \u001B[0m";
+    private static final String JUGADOR = "\u001B[42m  J  \u001B[0m";
+    private static final String ENEMIGO = "\u001B[41m  E  \u001B[0m";
+    private static final String SALIDA = "\u001B[43m  S  \u001B[0m";
+    private static final String VIDA_EXTRA = "\u001B[44m  V  \u001B[0m";
 
     private final String[][] tablero;
     private int jugadorX;
@@ -78,16 +78,16 @@ public class Game {
         int nuevaY = jugadorY;
 
         switch (direccion) {
-            case 'W': // Arriba
+            case 'W':
                 nuevaX = (jugadorX - numCasillas + TAMAÑO) % TAMAÑO;
                 break;
-            case 'S': // Abajo
+            case 'S':
                 nuevaX = (jugadorX + numCasillas) % TAMAÑO;
                 break;
-            case 'A': // Izquierda
+            case 'A':
                 nuevaY = (jugadorY - numCasillas + TAMAÑO) % TAMAÑO;
                 break;
-            case 'D': // Derecha
+            case 'D':
                 nuevaY = (jugadorY + numCasillas) % TAMAÑO;
                 break;
             default:

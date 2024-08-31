@@ -14,11 +14,11 @@ public class Main {
             if (turnoJugador1) {
                 System.out.println("Turno del Jugador 1");
                 juego1.pintarTablero();
-                System.out.print("Jugador 1:" + "elige movimiento (número de casillas (max. 3) + dirección: Ej. '1W', '2S'), pulsa 'T' para activar/desactivar trucos o 'X' para salir: ");
+                System.out.print("JUGADOR 1:" + "elige movimiento (número de casillas (max. 3) + dirección: Ej. '1W', '2S'), pulsa 'T' para activar/desactivar trucos o 'X' para salir: ");
             } else {
-                System.out.println("Turno del Jugador 2");
+                System.out.println("Turno del JUGADOR 2");
                 juego2.pintarTablero();
-                System.out.print("Jugador 2, elige movimiento (número de casillas (max. 3) + dirección: EJ. '1W' '2S'), pulsa 'T' para activar/desactivar trucos o 'X' para salir: ");
+                System.out.print("JUGADOR 2, elige movimiento (número de casillas (max. 3) + dirección: EJ. '1W' '2S'), pulsa 'T' para activar/desactivar trucos o 'X' para salir: ");
             }
 
             String opcion = teclado.nextLine().toUpperCase();
@@ -39,28 +39,28 @@ public class Main {
             boolean jugadorGanoOPerdio;
             if (turnoJugador1) {
                 jugadorGanoOPerdio = juego1.moverJugador(opcion);
-                System.out.println("Tablero del Jugador 1 después del movimiento:");
+                System.out.println("Tablero del JUGADOR 1 después del movimiento:");
                 juego1.pintarTablero();
-                System.out.println("Vidas restantes del Jugador 1: " + juego1.getVidas());
+                System.out.println("Vidas restantes del JUGADOR 1: " + juego1.getVidas());
                 if (jugadorGanoOPerdio) {
                     if (juego1.getVidas() == 0) {
-                        System.out.println("¡Jugador 1 ha perdido todas sus vidas y ha perdido el juego!");
+                        System.out.println("¡JUGADOR 1 ha perdido todas sus vidas y ha perdido el juego!");
                     } else {
-                        System.out.println("¡Jugador 1 ha alcanzado la salida y ha ganado el juego!");
+                        System.out.println("¡JUGADOR 1 ha alcanzado la salida y ha ganado el juego!");
                     }
                     break;
                 }
                 turnoJugador1 = false; // Cambiar turno al jugador 2
             } else {
                 jugadorGanoOPerdio = juego2.moverJugador(opcion);
-                System.out.println("Tablero del Jugador 2 después del movimiento:");
+                System.out.println("Tablero del JUGADOR 2 después del movimiento:");
                 juego2.pintarTablero();
-                System.out.println("Vidas restantes del Jugador 2: " + juego2.getVidas());
+                System.out.println("Vidas restantes del JUGADOR 2: " + juego2.getVidas());
                 if (jugadorGanoOPerdio) {
                     if (juego2.getVidas() == 0) {
-                        System.out.println("¡Jugador 2 ha perdido todas sus vidas y ha perdido el juego!");
+                        System.out.println("¡JUGADOR 2 ha perdido todas sus vidas y ha perdido el juego!");
                     } else {
-                        System.out.println("¡Jugador 2 ha alcanzado la salida y ha ganado el juego!");
+                        System.out.println("¡JUGADOR 2 ha alcanzado la salida y ha ganado el juego!");
                     }
                     break;
                 }
